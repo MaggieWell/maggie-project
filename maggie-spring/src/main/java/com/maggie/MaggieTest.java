@@ -1,4 +1,4 @@
-package main.java.com.maggie;
+package com.maggie;
 
 /**
  * @author Maggie.Hao

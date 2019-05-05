@@ -6,7 +6,7 @@ package com.maggie;
  * @author Maggie.Hao
  * @date 2019/4/30 16:50
  */
-public class CourseFactory {
+public class CourseFactory{
 
     public ICourse create(String course){
         if (course.equals("java")){
@@ -16,9 +16,9 @@ public class CourseFactory {
     }
 
     public ICourse course(String className){
-        try {
+        try{
             if (!(null == className || "".equals(className))){
-                return (ICourse)Class.forName(className).newInstance();
+                return (ICourse) Class.forName(className).newInstance();
 
             }
         }catch (Exception e){
@@ -26,5 +26,5 @@ public class CourseFactory {
         }
         return null;
     }
-    
+
 }

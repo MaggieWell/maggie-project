@@ -11,7 +11,7 @@ public class SimpleFactoryTest {
 
     public static void main(String[] args){
         CourseFactory courseFactory = new CourseFactory();
-        ICourse course = courseFactory.course("JavaCourse");
+        ICourse course = courseFactory.course("com.maggie.JavaCourse");
         course.record();
     }
 

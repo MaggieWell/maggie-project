@@ -1,4 +1,4 @@
-package com.maggie;
+package com.maggie.factorytest;
 
 /**
  * @author Maggie.Hao

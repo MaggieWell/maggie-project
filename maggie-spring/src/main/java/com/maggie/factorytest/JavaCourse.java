@@ -1,4 +1,4 @@
-package com.maggie;
+package com.maggie.factorytest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,9 @@ import org.slf4j.LoggerFactory;
 public class JavaCourse implements ICourse{
 private static final Logger LOGGER = LoggerFactory.getLogger(JavaCourse.class);
     public void record(){
+
         LOGGER.info("this is Java Course!");
+
     }
-    
+
 }

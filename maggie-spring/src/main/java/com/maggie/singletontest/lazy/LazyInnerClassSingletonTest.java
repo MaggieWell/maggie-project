@@ -1,4 +1,4 @@
-package com.maggie.singletontest;
+package com.maggie.singletontest.lazy;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

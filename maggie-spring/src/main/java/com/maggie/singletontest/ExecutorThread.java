@@ -1,5 +1,7 @@
 package com.maggie.singletontest;
 
+import com.maggie.singletontest.lazy.LazySingleton;
+
 /**
  * Description: 采用线程池，两个线程来演示全过程
  * author:MaggieHao

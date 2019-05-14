@@ -1,4 +1,6 @@
-package com.maggie.singletontest;
+package com.maggie.singletontest.lazy;
+
+import com.maggie.singletontest.ExecutorThread;
 
 /**
  * Description:懒汉式单例模式，使用debug的模式线程模式

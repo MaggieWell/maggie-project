@@ -1,4 +1,4 @@
-package com.maggie.singletontest;
+package com.maggie.singletontest.lazy;
 
 /**
 * Description:全程没有用到synchronized关键字

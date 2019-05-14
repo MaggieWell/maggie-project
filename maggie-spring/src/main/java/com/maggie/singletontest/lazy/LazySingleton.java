@@ -1,4 +1,4 @@
-package com.maggie.singletontest;
+package com.maggie.singletontest.lazy;
 
 /**
  * Description:懒汉式单例模式

@@ -8,12 +8,12 @@ import java.io.Serializable;
 * Date:2019-05-09-00:00:07
 *
 * */
-public class SeriableSingleton implements Serializable {
-    public final static SeriableSingleton INSTANCE = new SeriableSingleton();
-    private SeriableSingleton(){}
+public class SerializableSingleton implements Serializable {
+    public final static SerializableSingleton INSTANCE = new SerializableSingleton();
+    private SerializableSingleton(){}
 
 
-    public static SeriableSingleton getInstance() {
+    public static SerializableSingleton getInstance() {
         return INSTANCE;
     }
     private Object readResolve(){

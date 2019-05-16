@@ -1,4 +1,4 @@
-package com.maggie.singletontest.register;
+package com.maggie.singletontest.serializable;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,35 +8,36 @@ import java.io.ObjectOutputStream;
 /**
  * Description:
  * author:MaggieHao
- * Date:2019-05-13
- * Time:22:37
+ * Date:2019-05-09-00:00:07
  */
-
-public class EnumSingletonTest {
+public class SerializableSingletonTest {
     public static void main(String[] args) {
-        EnumSingleton serializableSingleton = null;
-        EnumSingleton serializableSingleton1 = EnumSingleton.getInstance();
-        serializableSingleton1.setData(new Object());
+        SerializableSingleton serializableSingleton = null;
+        SerializableSingleton serializableSingleton1 = SerializableSingleton.getInstance();
+
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream("EnumSingleton.obj");
+            fos = new FileOutputStream("SerializableSingleton.obj");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(serializableSingleton1);
             oos.flush();
             oos.close();
 
-            FileInputStream fis = new FileInputStream("EnumSingleton.obj");
+            FileInputStream fis = new FileInputStream("SerializableSingleton.obj");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            serializableSingleton = (EnumSingleton) ois.readObject();
+            serializableSingleton = (SerializableSingleton) ois.readObject();
             ois.close();
 
-            System.out.println("111111111" + serializableSingleton.getData());
-            System.out.println("2222222" + serializableSingleton1.getData());
+            System.out.println("111111111" + serializableSingleton);
+            System.out.println("2222222" + serializableSingleton1);
             System.out.println(serializableSingleton == serializableSingleton1);
 
         } catch (Exception e) {
             System.out.println(e);
         }
+
+
     }
+
 
 }

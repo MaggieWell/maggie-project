@@ -18,14 +18,14 @@ public class SeriableSingletonTest {
 
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream("SeriableSingleton.obj");
+            fos = new FileOutputStream("SerializableSingleton.obj");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(s2);
             oos.flush();
             oos.close();
 
 
-            FileInputStream fis = new FileInputStream("SeriableSingleton.obj");
+            FileInputStream fis = new FileInputStream("SerializableSingleton.obj");
             ObjectInputStream ois = new ObjectInputStream(fis);
             s1 = (SeriableSingleton)ois.readObject();
             ois.close();

@@ -17,6 +17,7 @@ public class PrototypeTest{
         concretePrototype.setName("Maggie");
 
         List hobbies = new ArrayList();
+        hobbies.add("eating");
         concretePrototype.setHobbies(hobbies);
 
 

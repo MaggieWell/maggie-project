@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<input type="text" name="input1" id="str" value="" placeholder="请输入字符串">
+<input type="text" name="length" value="" id="leng">
+<button onclick="GetLength()">长度计算</button>
+<script type="text/javascript">
+	var GetLength = function() {
+		var str = document.getElementById("str");
+		var str1 = str.value;
+		///<summary>获得字符串实际长度，中文2，英文1</summary>
+		///<param name="str">要获得长度的字符串</param>
+		var realLength = 0, len = str1.length, charCode = -1;
+		for (var i = 0; i < len; i++) {
+			charCode = str1.charCodeAt(i);
+			if (charCode >= 0 && charCode <= 128){
+				realLength += 1;
+			}else{
+				realLength += 2;
+			}
+		}
+		var objLength = document.getElementById("leng");
+		objLength.value = realLength;
+	};
+	// 执行代码：
+	//alert(jmz.GetLength($('#userid').val()));
+</script>
+</body>
+</html>

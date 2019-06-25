@@ -1,5 +1,6 @@
 package com.maggie.pattern.proxyPattern.dbRoute;
 
+import com.maggie.pattern.proxyPattern.dbRoute.proxy.OrderServiceDynamicProxy;
 import com.maggie.pattern.proxyPattern.dbRoute.proxy.OrderServiceStaticProxy;
 
 import java.text.ParseException;
@@ -16,6 +17,36 @@ public class DBRouterTest {
     public static void main(String[] args) {
         Order order = new Order();
         order.setCreateTime(new Date().getTime());
+        staticProxyTest(order);
+        dynamicProxyTest(order);
+
+    }
+
+    /**
+     * 使用动态代理实现
+     */
+    private static void dynamicProxyTest(Order order) {
+
+        OrderService orderServiceDynamicProxy = (OrderService) new OrderServiceDynamicProxy().getInstance(new OrderServiceImpl());
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+        try {
+            Date date = simpleDateFormat.parse("2019-05-19");
+            order.setCreateTime(date.getTime());
+            orderServiceDynamicProxy.createOrder(order);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * 使用静态代理实现
+     */
+    private static void staticProxyTest(Order order) {
+
 
         OrderService orderService = new OrderServiceStaticProxy(new OrderServiceImpl());
 
@@ -28,6 +59,5 @@ public class DBRouterTest {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
     }
 }

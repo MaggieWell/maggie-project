@@ -1,6 +1,4 @@
-package com.maggie.pattern.strategy;
-
-import org.apache.commons.lang.StringUtils;
+package com.maggie.pattern.strategy.promotion;
 
 /**
 * Description:

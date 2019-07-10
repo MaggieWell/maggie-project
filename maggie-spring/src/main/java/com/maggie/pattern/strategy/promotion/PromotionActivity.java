@@ -1,4 +1,4 @@
-package com.maggie.pattern.strategy;
+package com.maggie.pattern.strategy.promotion;
 
 /**
  * Description:促销活动，需要执行发布

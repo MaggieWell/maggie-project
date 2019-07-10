@@ -1,4 +1,4 @@
-package com.maggie.pattern.strategy;
+package com.maggie.pattern.strategy.promotion;
 
 import java.util.HashMap;
 import java.util.Map;

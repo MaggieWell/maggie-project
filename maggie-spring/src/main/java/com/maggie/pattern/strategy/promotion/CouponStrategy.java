@@ -1,4 +1,4 @@
-package com.maggie.pattern.strategy;
+package com.maggie.pattern.strategy.promotion;
 
 /**
  * Description:优惠券

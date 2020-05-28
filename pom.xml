@@ -15,7 +15,6 @@
         <module>migo-schedule</module>
         <module>migo-gen</module>
         <module>migo-api</module>
-        <module>maggie-spring</module>
     </modules>
 
 
